@@ -6,6 +6,25 @@ import java.util.Scanner;
 public class Task1 {
     static Scanner in = new Scanner(System.in);
 
+/*  START:
+    Print "Hello..."
+    WHILE TRUE LOOP:
+        Get age (input)
+        Give recommendation according to age:
+            IF age < 6
+                Only print recommendation for age < 6
+            ELSE IF lower value < age <= upper value or if age > 50
+                Get favorite genre (input)
+                IF genre is recognized
+                    Print recommendation for this age and genre
+                ELSE
+                    Print default recommendation for this age
+        Ask a question "Should we continue"
+        Get an answer (input)
+        IF weShouldContinue = false
+            Then BREAK.
+    END.
+*/
     public static void main(String[] args) {
 
         print("Hello. I'll be your virtual assistant. Tell me about yourself so I can recommend you some books to read.");
@@ -17,9 +36,9 @@ public class Task1 {
 
             giveRecommendation(age);
 
-            boolean cont = askShouldWeContinue();
+            boolean weShouldContinue = askShouldWeContinue();
 
-            if (!cont) {
+            if (!weShouldContinue) {
                 break;
             }
 
